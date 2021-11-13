@@ -2,7 +2,7 @@
   --text-color: rgb(0, 0, 0);
   --my-yellow: #ffc000;
   --my-blue: #1943ff;
-  --my-blue-2: #008cff;
+  --my-blue-2: #0475d1;
   --my-red: #ff0d37;
   --dark-color: #2e2921;
   --light-color: #c0b9a9;
@@ -26,16 +26,21 @@ body {
 h2 {
   text-decoration: underline;
 }
+a {
+  color: var(--light-color);
+}
 
 #classWrapper {
   height: 100vh;
   width: 100vw;
   overflow: auto;
   scroll-behavior: smooth;
+  position: relative;
+  font-size: min(calc(5vw - 0.8em) calc(5vh-0.08em));
 }
 
 header {
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   background-color: var(--my-yellow);
@@ -79,7 +84,7 @@ nav a {
 }
 
 .spacer {
-  height: 100vh;
+  min-height: 100vh;
   top: 0;
   display: grid;
   place-items: center;
@@ -173,6 +178,20 @@ nav a {
 .sectionLast {
   padding-top: 1em;
   color: var(--dark-color);
+}
+
+#skillsContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skillSubContainer {
+  border: solid 1px;
+  border-color: var(--my-blue-2);
+  padding: 0.2em 0.7em;
+  margin: 0.4em;
+  flex-grow: 1;
 }
 
 footer {
