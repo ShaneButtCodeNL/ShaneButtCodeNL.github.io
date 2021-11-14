@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
     <title>Shane Butt's Page!</title>
+    <script src="scripts/script.js" defer></script> 
   </head>
   <body>
     <div id="classWrapper">
@@ -18,20 +19,29 @@
           ><img src="./img/logo.svg" class="logo" alt="My Logo"
         /></a>
         <nav>
-          <a href="#aboutMe"><div class="navItem">About me</div></a>
-          <a href="#mySkills"><div class="navItem">My Skills</div></a>
-          <a href="#myProjects"><div class="navItem">My Projects</div></a>
-          <a href="#contactMe"><div class="navItem">Contact Me</div></a>
+          <a href="#aboutMeMarker"><div class="navItem">About me</div></a>
+          <a href="#mySkillsMarker"><div class="navItem">My Skills</div></a>
+          <a href="#myProjectsMarker"><div class="navItem">My Projects</div></a>
+          <a href="#contactMeMarker"><div class="navItem">Contact Me</div></a>
         </nav>
       </header>
       <div id="top" class="spacer">
         <section id="intro">
-          <h1><u>Welcome To Me!</u></h1>
+          <h1 id="welcomeToMe"><u>Welcome To Me!</u></h1>
           <p>This page is a view into me. I hope you enjoy your stay.</p>
+          <p>
+            <a
+              href="https://github.com/ShaneButtCodeNL/"
+              target="_blank"
+              style="color: var(--dark-color)"
+              >GitHub</a
+            >
+          </p>
         </section>
       </div>
       <div id="mainContent">
         <section id="aboutMe">
+          <div id="aboutMeMarker" class="marker"></div>
           <div class="sectionLeft">
             <div class="sectionContent">
               <h2>About Me</h2>
@@ -53,6 +63,7 @@
           </div>
         </section>
         <section id="mySkills">
+          <div id="mySkillsMarker" class="marker"></div>
           <div class="sectionRight">
             <div class="sectionContent">
               <h2>Skills</h2>
@@ -85,6 +96,7 @@
                     <li>Object Oriented Programming/Principals</li>
                     <li>Relational Database Design</li>
                     <li>Cloud</li>
+                    <li>AI/Machine Learning</li>
                   </ul>
                 </div>
               </div>
@@ -92,28 +104,129 @@
           </div>
         </section>
         <section id="myProjects">
+          <div id="myProjectsMarker" class="marker"></div>
           <div class="sectionLeft">
             <div class="sectionContent">
               <h2>My Projects</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Placeat eius ex ullam exercitationem, inventore dicta, possimus
-                cupiditate laudantium eos similique necessitatibus. Et
-                distinctio tempora, possimus neque provident aliquid fugiat
-                voluptates nostrum molestiae ducimus adipisci culpa voluptas
-                mollitia dignissimos soluta dicta, ab sed aut ullam amet iusto
-                non inventore? Molestiae voluptate iure dignissimos itaque!
-                Magni corrupti assumenda incidunt beatae placeat quasi, quod
-                eligendi atque veritatis! Modi ut sunt porro enim magni
-                veritatis atque, ducimus reprehenderit laboriosam quis, id natus
-                error. Dicta eligendi nobis quasi corrupti molestias maxime
-                harum, minus perferendis? Nihil eos nemo assumenda nisi
-                quibusdam eligendi magnam pariatur officia iure.
-              </p>
+              <section>
+                <h3>My Collection app and API:</h3>
+                <a
+                    href="https://github.com/ShaneButtCodeNL/collection-api"
+                    target="_blank"
+                    >API</a
+                  ><br />
+                  <a
+                    href="https://github.com/ShaneButtCodeNL/my-collection-app"
+                    target="_blank"
+                    >APP</a
+                  >
+                <div class="projectsContentContainer">
+                  
+                  <div class="projectDescription">
+                    <p>
+                      This project is an online app to help with tracking items
+                      in my collection. It consists of two parts the API that
+                      allows me to interact with a mongoDB database that
+                      contains the information, and the app that uses the api
+                      for to show me what I have and allows me to edit and add
+                      items to the collection.
+                    </p>
+                    <p></p>
+                  </div>
+                  <!-- Slideshow of images to show app-->
+                  <div class="slideshowContainer">
+                    <!--Slides-->
+                    <div class="slides fade">
+                      <div class="numText">1 / 10</div>
+                      <img
+                        src="img/collection-app/pic1.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Title Screen</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">2 / 10</div>
+                      <img
+                        src="img/collection-app/pic2.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Home Screen</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">3 / 10</div>
+                      <img
+                        src="img/collection-app/pic3.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Light Mode</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">4 / 10</div>
+                      <img
+                        src="img/collection-app/pic4.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Transitioning collection items</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">5 / 10</div>
+                      <img
+                        src="img/collection-app/pic5.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Search by name</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">6 / 10</div>
+                      <img
+                        src="img/collection-app/pic6.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Login Screen</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">7 / 10</div>
+                      <img
+                        src="img/collection-app/pic7.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Home page Logged in</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">8 / 10</div>
+                      <img
+                        src="img/collection-app/pic8.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Add an item to collection screen</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">9 / 10</div>
+                      <img
+                        src="img/collection-app/pic9.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Edit a detail</span></div>
+                    </div>
+                    <div class="slides fade">
+                      <div class="numText">10 / 10</div>
+                      <img
+                        src="img/collection-app/pic10.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Edit all details</span></div>
+                    </div>
+                    <!--Controls-->
+                    <a class="prevImg" onclick="plusSlides(-1)">&#10094</a>
+                    <a class="nextImg" onclick="plusSlides(1)">&#10095</a>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </section>
         <section id="contactMe">
+          <div id="contactMeMarker" class="marker"></div>
           <div class="sectionLast">
             <div class="sectionContent">
               <h2>Contact</h2>

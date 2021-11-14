@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap");
+
 :root {
   --text-color: rgb(0, 0, 0);
   --my-yellow: #ffc000;
@@ -7,7 +9,13 @@
   --dark-color: #2e2921;
   --light-color: #c0b9a9;
   --section-tri-height: 5em;
+  --marker-offset: -5em;
   --section-content-width: 70%;
+}
+
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 body {
@@ -52,7 +60,7 @@ header {
 }
 
 .logo {
-  height: 7em;
+  height: 5em;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -98,6 +106,10 @@ nav a {
   line-height: 2.1em;
 }
 
+#welcomeToMe {
+  font-family: "Lobster", cursive;
+}
+
 #mainContent {
   color: var(--light-color);
 }
@@ -106,6 +118,12 @@ nav a {
   margin: 2em 0;
   position: relative;
   line-height: 2em;
+}
+
+.marker {
+  position: absolute;
+  top: var(--marker-offset);
+  height: 0;
 }
 
 .sectionLeft {
@@ -194,6 +212,99 @@ nav a {
   flex-grow: 1;
 }
 
+.projectsContentContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.projectDescription {
+  max-width: 40%;
+}
+
+/**
+SlideShow
+**/
+.slideshowContainer {
+  max-width: 30%;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+}
+
+.prevImg,
+.nextImg {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.nextImg {
+  right: 0;
+  border-radius: 3xp 0 0 3px;
+}
+
+.prevImg:hover,
+.nextImg:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.imgDesc {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.imgDesc span {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 footer {
   width: 100%;
   background-color: var(--dark-color);
