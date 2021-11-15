@@ -15,9 +15,11 @@
   <body>
     <div id="classWrapper">
       <header class="alt">
-        <a href="#top"
-          ><img src="./img/logo.svg" class="logo" alt="My Logo"
-        /></a>
+        <div class="logoBox">
+          <a href="#top">
+            <img src="./img/logo.svg" class="logo" alt="My Logo"/>
+        </a>
+      </div>
         <nav>
           <a href="#aboutMeMarker"><div class="navItem">About me</div></a>
           <a href="#mySkillsMarker"><div class="navItem">My Skills</div></a>
@@ -136,7 +138,7 @@
                   <!-- Slideshow of images to show app-->
                   <div class="slideshowContainer">
                     <!--Slides-->
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">1 / 10</div>
                       <img
                         src="img/collection-app/pic1.png"
@@ -144,7 +146,7 @@
                       />
                       <div class="imgDesc"><span>Title Screen</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">2 / 10</div>
                       <img
                         src="img/collection-app/pic2.png"
@@ -152,7 +154,7 @@
                       />
                       <div class="imgDesc"><span>Home Screen</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">3 / 10</div>
                       <img
                         src="img/collection-app/pic3.png"
@@ -160,7 +162,7 @@
                       />
                       <div class="imgDesc"><span>Light Mode</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">4 / 10</div>
                       <img
                         src="img/collection-app/pic4.png"
@@ -168,7 +170,7 @@
                       />
                       <div class="imgDesc"><span>Transitioning collection items</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">5 / 10</div>
                       <img
                         src="img/collection-app/pic5.png"
@@ -176,7 +178,7 @@
                       />
                       <div class="imgDesc"><span>Search by name</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">6 / 10</div>
                       <img
                         src="img/collection-app/pic6.png"
@@ -184,7 +186,7 @@
                       />
                       <div class="imgDesc"><span>Login Screen</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">7 / 10</div>
                       <img
                         src="img/collection-app/pic7.png"
@@ -192,7 +194,7 @@
                       />
                       <div class="imgDesc"><span>Home page Logged in</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">8 / 10</div>
                       <img
                         src="img/collection-app/pic8.png"
@@ -200,7 +202,7 @@
                       />
                       <div class="imgDesc"><span>Add an item to collection screen</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">9 / 10</div>
                       <img
                         src="img/collection-app/pic9.png"
@@ -208,7 +210,7 @@
                       />
                       <div class="imgDesc"><span>Edit a detail</span></div>
                     </div>
-                    <div class="slides fade">
+                    <div class="slides fade p1Slides">
                       <div class="numText">10 / 10</div>
                       <img
                         src="img/collection-app/pic10.png"
@@ -217,10 +219,134 @@
                       <div class="imgDesc"><span>Edit all details</span></div>
                     </div>
                     <!--Controls-->
-                    <a class="prevImg" onclick="plusSlides(-1)">&#10094</a>
-                    <a class="nextImg" onclick="plusSlides(1)">&#10095</a>
+                    <a class="prevImg" onclick="plusSlides(-1,'p1Slides')">&#10094</a>
+                    <a class="nextImg" onclick="plusSlides(1,'p1Slides')">&#10095</a>
                   </div>
                 </div>
+                
+              </section>
+              <section>
+                <h3>Algorithm Showcase:</h3>
+                
+                  <a
+                    href="https://github.com/ShaneButtCodeNL/algorithm-showcase"
+                    target="_blank"
+                    >APP</a
+                  >
+                <div class="projectsContentContainer">
+                  
+                  <div class="projectDescription">
+                    <p>
+                      This project is an online app that shows how some simple algorithms work. It plays animations that show the algoriths play out step by step. The main purpose of this project was to practice animateing and displaying data.
+                    </p>
+                    <p></p>
+                  </div>
+                  <!-- Slideshow of images to show app-->
+                  <div class="slideshowContainer">
+                    <!--Slides-->
+                    <div class="slides fade p2Slides">
+                      <div class="numText">1 / 12</div>
+                      <img
+                        src="img/algo-display/pic1.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Home Screen</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">2 / 12</div>
+                      <img
+                        src="img/algo-display/pic2.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>What's This Button</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">3 / 12</div>
+                      <img
+                        src="img/algo-display/pic3.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Problem Selection</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">4 / 12</div>
+                      <img
+                        src="img/algo-display/pic4.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Pathfinding with midpoint</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">5 / 12</div>
+                      <img
+                        src="img/algo-display/pic5.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Searching for the midpoint</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">6 / 12</div>
+                      <img
+                        src="img/algo-display/pic6.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Drawing a path from origin to end</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">7 / 12</div>
+                      <img
+                        src="img/algo-display/pic7.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Search Screen</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">8 / 12</div>
+                      <img
+                        src="img/algo-display/pic8.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Linear search looking for value</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">9 / 12</div>
+                      <img
+                        src="img/algo-display/pic9.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Binary Search finding it's target</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">10 / 12</div>
+                      <img
+                        src="img/algo-display/pic10.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Searching Page</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">11 / 12</div>
+                      <img
+                        src="img/algo-display/pic11.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Merge Sort Just viben</span></div>
+                    </div>
+                    <div class="slides fade p2Slides">
+                      <div class="numText">12 / 12</div>
+                      <img
+                        src="img/algo-display/pic12.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Sorted</span></div>
+                    </div>
+                    <!--Controls-->
+                    <a class="prevImg" onclick="plusSlides(-1,'p2Slides')">&#10094</a>
+                    <a class="nextImg" onclick="plusSlides(1,'p2Slides')">&#10095</a>
+                  </div>
+                </div>
+                <p>Check out my <a href="https://github.com/ShaneButtCodeNL/"
+              target="_blank">GitHub</a> for more.</p>
               </section>
             </div>
           </div>
@@ -228,8 +354,39 @@
         <section id="contactMe">
           <div id="contactMeMarker" class="marker"></div>
           <div class="sectionLast">
-            <div class="sectionContent">
-              <h2>Contact</h2>
+            <div class="sectionContent contactBox">
+              <div style="margin: 0 auto;width: fit-content;"><h2>Contact</h2>
+              <p>
+                Feel free to send me a message below. I look foward to hearing from you.
+              </p></div>
+              <div id="contactContainer">
+                <div id="messageContainer">
+                  <!-- Use Formspree to send me a msg-->
+                  <form action="https://formspree.io/f/xrgrnlpz" method="post">
+                    <div class="messageItem">
+                      <label for="name">Name:</label>
+                      <br/>
+                      <input type="text" name="name" id="messageName">
+                    </div>
+                    <div class="messageItem">
+                      <label for="email">E-Mail:</label>
+                      <br/>
+                      <input type="email" name="email" id="messageEmail">
+                    </div>
+                    <div class="messageItem">
+                      <label for="message">Message:</label>
+                      <br/>
+                      <textarea name="message" id="messageMessage" rows="6"></textarea>
+                    </div>
+                    <div class="messageItem">
+                      <button type="submit" name="submit">Submit</button>
+                    </div>
+                  </form>
+                </div>
+                <div id="contactDetailsContainer">
+                  <span>E-Mail:shanebuttcode@gmail.com</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

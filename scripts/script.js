@@ -1,19 +1,24 @@
+/**
+ * Used for image slides
+ */
+
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex, "p1Slides");
+showSlides(slideIndex, "p2Slides");
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function plusSlides(n, cn) {
+  showSlides((slideIndex += n), cn);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function currentSlide(n, cn) {
+  showSlides((slideIndex = n), cn);
 }
 
-function showSlides(n) {
+function showSlides(n, cn) {
   var i;
-  var slides = document.getElementsByClassName("slides");
+  var slides = document.getElementsByClassName(cn ? cn : "slides");
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -25,3 +30,7 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+/**
+ * End Of Slides
+ */

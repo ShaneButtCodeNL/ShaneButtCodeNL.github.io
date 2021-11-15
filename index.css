@@ -40,7 +40,8 @@ a {
 
 #classWrapper {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  min-width: 100vw;
   overflow: auto;
   scroll-behavior: smooth;
   position: relative;
@@ -50,6 +51,7 @@ a {
 header {
   position: sticky;
   width: 100%;
+  max-width: 100vw;
   top: 0;
   background-color: var(--my-yellow);
   display: flex;
@@ -60,9 +62,12 @@ header {
 }
 
 .logo {
+  height: 100%;
+}
+
+.logoBox {
   height: 5em;
-  margin-top: auto;
-  margin-bottom: auto;
+  align-self: center;
 }
 
 nav {
@@ -108,6 +113,11 @@ nav a {
 
 #welcomeToMe {
   font-family: "Lobster", cursive;
+  padding: 0 1em;
+}
+
+#intro p {
+  padding: 0 1em;
 }
 
 #mainContent {
@@ -124,6 +134,7 @@ nav a {
   position: absolute;
   top: var(--marker-offset);
   height: 0;
+  visibility: hidden;
 }
 
 .sectionLeft {
@@ -215,6 +226,7 @@ nav a {
 .projectsContentContainer {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .projectDescription {
@@ -226,6 +238,7 @@ SlideShow
 **/
 .slideshowContainer {
   max-width: 30%;
+  min-width: 300px;
   position: relative;
   margin: auto;
 }
@@ -284,9 +297,9 @@ SlideShow
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 @-webkit-keyframes fade {
   from {
@@ -305,6 +318,61 @@ SlideShow
     opacity: 1;
   }
 }
+
+#contactMe {
+  padding: 0 1em;
+}
+
+#contactContainer {
+  display: flex;
+  gap: 7em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#messageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  gap: 1em;
+  max-width: 50%;
+}
+#messageContainer * {
+  max-width: 100%;
+  line-height: 1.3em;
+}
+
+.messageItem {
+  width: 100%;
+  max-width: 20ch;
+}
+
+#messageContainer input,
+#messageContainer textarea,
+#messageContainer button {
+  background-color: rgb(199, 199, 199);
+  width: 100%;
+  padding: 0 2ch;
+  border-radius: 1em;
+}
+
+#messageContainer input {
+  height: 2.5em;
+}
+
+#messageContainer textarea {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
+#messageContainer label {
+  font-size: 1.2em;
+  width: fit-content;
+}
+
+#messageContainer button {
+  height: 3em;
+}
+
 footer {
   width: 100%;
   background-color: var(--dark-color);
