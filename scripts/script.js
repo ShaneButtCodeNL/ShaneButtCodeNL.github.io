@@ -12,32 +12,33 @@ let headerFlag = false;
  */
 
 var slideIndex = 1;
-showSlides(slideIndex, "p1Slides");
-showSlides(slideIndex, "p2Slides");
+showSlides(slideIndex, "p1Slides", "slide1Pos");
+showSlides(slideIndex, "p2Slides", "slide2Pos");
 
 // Next/previous controls
-function plusSlides(n, cn) {
-  showSlides((slideIndex += n), cn);
+function plusSlides(n, cn, posName) {
+  showSlides(
+    (document.getElementById(posName).value =
+      Number.parseInt(document.getElementById(posName).value) + n),
+    cn,
+    posName
+  );
 }
 
-// Thumbnail image controls
-function currentSlide(n, cn) {
-  showSlides((slideIndex = n), cn);
-}
-
-function showSlides(n, cn) {
+function showSlides(n, cn, posName) {
+  console.log(document.getElementById(posName));
   var i;
   var slides = document.getElementsByClassName(cn ? cn : "slides");
   if (n > slides.length) {
-    slideIndex = 1;
+    document.getElementById(posName).value = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    document.getElementById(posName).value = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex - 1].style.display = "block";
+  slides[document.getElementById(posName).value - 1].style.display = "block";
 }
 
 /**

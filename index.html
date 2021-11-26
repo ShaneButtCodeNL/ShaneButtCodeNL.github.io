@@ -136,7 +136,9 @@
                     <p></p>
                   </div>
                   <!-- Slideshow of images to show app-->
-                  <div class="slideshowContainer">
+                  <div id="slideShow1" class="slideshowContainer">
+                    <input type="number" name="slide1Pos" id="slide1Pos" class="slideShowValue" value="1" >
+
                     <!--Slides-->
                     <div class="slides fade p1Slides">
                       <div class="numText">1 / 10</div>
@@ -219,8 +221,8 @@
                       <div class="imgDesc"><span>Edit all details</span></div>
                     </div>
                     <!--Controls-->
-                    <a class="prevImg" onclick="plusSlides(-1,'p1Slides')">&#10094</a>
-                    <a class="nextImg" onclick="plusSlides(1,'p1Slides')">&#10095</a>
+                    <a class="prevImg" onclick="plusSlides(-1,'p1Slides','slide1Pos')">&#10094</a>
+                    <a class="nextImg" onclick="plusSlides(1,'p1Slides','slide1Pos')">&#10095</a>
                   </div>
                 </div>
                 
@@ -242,7 +244,8 @@
                     <p></p>
                   </div>
                   <!-- Slideshow of images to show app-->
-                  <div class="slideshowContainer">
+                  <div id="slideShow2" class="slideshowContainer" >
+                    <input type="number" name="slide2Pos" id="slide2Pos" class="slideShowValue" value="1" >
                     <!--Slides-->
                     <div class="slides fade p2Slides">
                       <div class="numText">1 / 12</div>
@@ -341,8 +344,8 @@
                       <div class="imgDesc"><span>Sorted</span></div>
                     </div>
                     <!--Controls-->
-                    <a class="prevImg" onclick="plusSlides(-1,'p2Slides')">&#10094</a>
-                    <a class="nextImg" onclick="plusSlides(1,'p2Slides')">&#10095</a>
+                    <a class="prevImg" onclick="plusSlides(-1,'p2Slides','slide2Pos')">&#10094</a>
+                    <a class="nextImg" onclick="plusSlides(1,'p2Slides','slide2Pos')">&#10095</a>
                   </div>
                 </div>
                 <p>Check out my <a href="https://github.com/ShaneButtCodeNL/"
