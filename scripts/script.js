@@ -1,4 +1,13 @@
 /**
+ * Turns a string with a px to a number
+ * @param {String} size
+ * @returns The number
+ */
+const removePX = (size) => Number.parseInt(size.substr(0, size.length - 2));
+
+let headerFlag = false;
+
+/**
  * Used for image slides
  */
 
@@ -34,3 +43,37 @@ function showSlides(n, cn) {
 /**
  * End Of Slides
  */
+
+/**
+ * scroll header
+ */
+const headerScrollFunction = (headerSize) => {
+  let flag =
+    document.getElementById("classWrapper").scrollTop > removePX(headerSize) ||
+    document.documentElement.scrollTop > removePX(headerSize);
+  if (flag && !headerFlag) {
+    document.documentElement.style.setProperty(
+      "--header-before-size",
+      headerSize
+    );
+    headerFlag = true;
+  } else if (!flag && headerFlag) {
+    document.documentElement.style.setProperty("--header-before-size", "0px");
+    headerFlag = false;
+  }
+};
+/**
+ * End of scroll header
+ */
+
+//Sets the headerScroll function to trigger when the classWrapper div scrolls
+document.getElementById("classWrapper").onscroll = () =>
+  headerScrollFunction(
+    getComputedStyle(document.getElementById("header")).getPropertyValue(
+      "height"
+    )
+  );
+
+document.onload = headerScrollFunction(
+  getComputedStyle(document.getElementById("header")).getPropertyValue("height")
+);

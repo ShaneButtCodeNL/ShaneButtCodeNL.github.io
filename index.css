@@ -11,6 +11,7 @@
   --section-tri-height: 5em;
   --marker-offset: -5em;
   --section-content-width: 70%;
+  --header-before-size: 0px;
 }
 
 html {
@@ -56,6 +57,18 @@ header {
   background-color: var(--my-yellow);
   display: flex;
   z-index: 100;
+}
+#header::before {
+  max-height: var(--header-before-size);
+  height: 100%;
+  width: 100%;
+  background: var(--my-yellow);
+  position: absolute;
+  top: 0;
+  content: "";
+  z-index: -1;
+  opacity: 0.8;
+  transition: max-height 200ms ease-out;
 }
 .alt {
   background-color: transparent;
