@@ -26,7 +26,6 @@ function plusSlides(n, cn, posName) {
 }
 
 function showSlides(n, cn, posName) {
-  console.log(document.getElementById(posName));
   var i;
   var slides = document.getElementsByClassName(cn ? cn : "slides");
   if (n > slides.length) {
@@ -65,6 +64,29 @@ const headerScrollFunction = (headerSize) => {
 };
 /**
  * End of scroll header
+ */
+
+/**
+ * Makes the slideshows bigger/smaller
+ */
+const bigScreen = (id) => {
+  console.log(id);
+  document.getElementById(id).style.setProperty("width", "100%");
+  document.getElementById(id).style.setProperty("height", "100%");
+  document.getElementById(id).style.setProperty("max-width", "100%");
+  document.getElementById(id + "Big").style.setProperty("display", "none");
+  document.getElementById(id + "Small").style.setProperty("display", "block");
+};
+const smallScreen = (id) => {
+  console.log(id);
+  document.getElementById(id).style.setProperty("width", "auto");
+  document.getElementById(id).style.setProperty("height", "auto");
+  document.getElementById(id).style.setProperty("max-width", "30%");
+  document.getElementById(id + "Big").style.setProperty("display", "block");
+  document.getElementById(id + "Small").style.setProperty("display", "none");
+};
+/**
+ * End
  */
 
 //Sets the headerScroll function to trigger when the classWrapper div scrolls

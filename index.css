@@ -38,6 +38,13 @@ h2 {
 a {
   color: var(--light-color);
 }
+.clickDiv {
+  z-index: 999;
+  position: absolute;
+}
+.clickDiv:hover {
+  cursor: pointer;
+}
 
 #classWrapper {
   height: 100vh;
@@ -240,6 +247,7 @@ nav a {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .projectDescription {

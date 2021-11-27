@@ -138,10 +138,9 @@
                   <!-- Slideshow of images to show app-->
                   <div id="slideShow1" class="slideshowContainer">
                     <input type="number" name="slide1Pos" id="slide1Pos" class="slideShowValue" value="1" >
-
                     <!--Slides-->
                     <div class="slides fade p1Slides">
-                      <div class="numText">1 / 10</div>
+                        <div class="numText">1 / 10</div>
                       <img
                         src="img/collection-app/pic1.png"
                         style="width: 100%"
@@ -223,6 +222,10 @@
                     <!--Controls-->
                     <a class="prevImg" onclick="plusSlides(-1,'p1Slides','slide1Pos')">&#10094</a>
                     <a class="nextImg" onclick="plusSlides(1,'p1Slides','slide1Pos')">&#10095</a>
+                    <div>
+                      <a href="#slideShow1"><div class="clickDiv" id="slideShow1Big"  onclick="bigScreen('slideShow1')">Enlarge</div></a>
+                      <a href="#slideShow1"><div class="clickDiv" id="slideShow1Small"  onclick="smallScreen('slideShow1')" style="display: none;">Shrink</div></a>
+                  </div>
                   </div>
                 </div>
                 
@@ -346,6 +349,10 @@
                     <!--Controls-->
                     <a class="prevImg" onclick="plusSlides(-1,'p2Slides','slide2Pos')">&#10094</a>
                     <a class="nextImg" onclick="plusSlides(1,'p2Slides','slide2Pos')">&#10095</a>
+                    <div>
+                      <a href="#slideShow2"><div class="clickDiv" id="slideShow2Big"  onclick="bigScreen('slideShow2')">Enlarge</div></a>
+                      <a href="#slideShow2"><div class="clickDiv" id="slideShow2Small"  onclick="smallScreen('slideShow2')" style="display: none;">Shrink</div></a>
+                  </div>
                   </div>
                 </div>
                 <p>Check out my <a href="https://github.com/ShaneButtCodeNL/"
