@@ -5,7 +5,15 @@
  */
 const removePX = (size) => Number.parseInt(size.substr(0, size.length - 2));
 
+const getTopByID = (id) =>
+  document.getElementById(id).getBoundingClientRect().top;
+const getBottomByID = (id) =>
+  document.getElementById(id).getBoundingClientRect().bottom;
+
 let headerFlag = false;
+let aboutMeFlag = false;
+let skillsFlag = false;
+let projectsFlag = false;
 
 /**
  * Used for image slides
@@ -88,15 +96,60 @@ const smallScreen = (id) => {
 /**
  * End
  */
+/**
+ * Makes the sections slide in
+ */
+const getSlidePos = () => 0.8 * window.innerHeight;
+const slideInAboutMe = (id) => {
+  let flag = getTopByID("aboutMeMarker") < getSlidePos();
+  if (flag && !aboutMeFlag) {
+    document.getElementById(id).style.left = "0%";
+    aboutMeFlag = true;
+  }
+  if (!flag && aboutMeFlag) {
+    document.getElementById(id).style.left = "-100%";
+    aboutMeFlag = false;
+  }
+};
+const slideInSkills = (id) => {
+  let flag = getTopByID("mySkillsMarker") < getSlidePos();
+  if (flag && !skillsFlag) {
+    document.getElementById(id).style.right = "0%";
 
-//Sets the headerScroll function to trigger when the classWrapper div scrolls
-document.getElementById("classWrapper").onscroll = () =>
+    skillsFlag = true;
+  }
+  if (!flag && skillsFlag) {
+    document.getElementById(id).style.right = "-100%";
+    skillsFlag = false;
+  }
+};
+const slideInProjects = (id) => {
+  let flag = getTopByID("myProjects") < getSlidePos();
+  if (flag && !projectsFlag) {
+    document.getElementById(id).style.left = "0%";
+    projectsFlag = true;
+  }
+  if (!flag && projectsFlag) {
+    document.getElementById(id).style.left = "-100%";
+    projectsFlag = false;
+  }
+};
+/**
+ * End
+ */
+
+const scrollFunction = () => {
   headerScrollFunction(
     getComputedStyle(document.getElementById("header")).getPropertyValue(
       "height"
     )
   );
+  slideInAboutMe("aboutMeSlideSection");
+  slideInSkills("skillsSlideSection");
+  slideInProjects("projectsSlideSection");
+};
 
-document.onload = headerScrollFunction(
-  getComputedStyle(document.getElementById("header")).getPropertyValue("height")
-);
+//Sets the headerScroll function to trigger when the classWrapper div scrolls
+document.getElementById("classWrapper").onscroll = () => scrollFunction();
+
+document.onload = scrollFunction();

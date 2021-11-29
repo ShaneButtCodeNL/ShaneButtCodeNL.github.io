@@ -51,6 +51,7 @@ a {
   width: 100%;
   min-width: 100vw;
   overflow: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   position: relative;
   font-size: min(calc(5vw - 0.8em) calc(5vh-0.08em));
@@ -213,6 +214,9 @@ nav a {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.sectionContent {
+  position: relative;
+}
 .sectionRight .sectionContent {
   width: var(--section-content-width);
   margin-left: auto;
@@ -223,6 +227,30 @@ nav a {
   width: var(--section-content-width);
   margin-right: auto;
   margin-left: 2em;
+}
+.slideSectionWrapper {
+  position: relative;
+}
+section {
+  position: relative;
+}
+#aboutMeSlideSection {
+  left: -100%;
+  position: relative;
+  transition: left 500ms ease-out;
+  will-change: left;
+}
+#skillsSlideSection {
+  right: -100%;
+  position: relative;
+  transition: right 500ms ease-out;
+  will-change: right;
+}
+#projectsSlideSection {
+  left: -100%;
+  position: relative;
+  transition: left 500ms ease-out;
+  will-change: left;
 }
 .sectionLast {
   padding-top: 1em;
