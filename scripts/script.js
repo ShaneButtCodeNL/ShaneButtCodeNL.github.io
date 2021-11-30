@@ -99,7 +99,8 @@ const smallScreen = (id) => {
 /**
  * Makes the sections slide in
  */
-const getSlidePos = () => 0.8 * window.innerHeight;
+const getSlidePos = () =>
+  Math.max(0.8 * window.innerHeight, window.innerHeight - 300);
 const slideInAboutMe = (id) => {
   let flag = getTopByID("aboutMeMarker") < getSlidePos();
   if (flag && !aboutMeFlag) {
