@@ -139,6 +139,23 @@ const slideInProjects = (id) => {
  * End
  */
 
+//Slides a div in
+const slideInLinkLeft = (id) => {
+  document.getElementById(id).style.left = "0";
+};
+const slideOutLinkLeft = (id) => {
+  document.getElementById(id).style.left = "-100vw";
+};
+const slideInLinkRight = (id) => {
+  console.log("SLIDEIN");
+  document.getElementById(id).style.right = "0";
+};
+const slideOutLinkRight = (id) => {
+  console.log("SLIDEOUT");
+  document.getElementById(id).style.right = "-100vw";
+};
+//End
+
 const scrollFunction = () => {
   headerScrollFunction(
     getComputedStyle(document.getElementById("header")).getPropertyValue(

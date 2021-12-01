@@ -136,7 +136,28 @@ nav a {
   font-family: "Lobster", cursive;
   padding: 0 1em;
 }
-
+.slideLinkLeft {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--my-yellow);
+  z-index: -1;
+  border: outset 1px rgba(0, 0, 0, 0.2);
+  left: -100vw;
+  will-change: left;
+  transition: left 0.5s ease-out;
+}
+.slideLinkRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--my-yellow);
+  z-index: -1;
+  border: outset 1px rgba(0, 0, 0, 0.2);
+  right: -100vw;
+  will-change: right;
+  transition: right 0.5s ease-out;
+}
 #intro p {
   padding: 0 1em;
 }

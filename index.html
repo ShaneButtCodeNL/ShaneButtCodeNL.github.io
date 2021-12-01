@@ -31,14 +31,29 @@
         <section id="intro">
           <h1 id="welcomeToMe"><u>Welcome To Me!</u></h1>
           <p>This page is a view into me. I hope you enjoy your stay.</p>
-          <p>
-            <a
-              href="https://github.com/ShaneButtCodeNL/"
-              target="_blank"
-              style="color: var(--dark-color)"
-              >GitHub</a
-            >
-          </p>
+          <div>
+          <a
+            href="https://github.com/ShaneButtCodeNL/"
+            target="_blank"
+            style="color: var(--dark-color)">
+            <div style="width:fit-content;height: fit-content;position: relative;"
+            onmouseenter="slideInLinkLeft('githubSlide')"
+            onmouseleave="slideOutLinkLeft('githubSlide')">
+              <div id="githubSlide" class="slideLinkLeft"></div>
+              <p>GitHub</p>
+              </div>
+            </a>
+          </div>
+          <div >
+            <a href="https://www.linkedin.com/in/shane-butt-134812146/" target="_blank" style="color:var(--dark-color)">
+            <div style="width:fit-content;height: fit-content;position: relative;"
+            onmouseenter="slideInLinkRight('linkedinSlide')"
+            onmouseleave="slideOutLinkRight('linkedinSlide')">
+              <div id="linkedinSlide" class="slideLinkRight"></div>
+              <p>LinkedIn</p>
+            </div>
+           </a>
+          </div>
         </section>
       </div>
       <div id="mainContent">
