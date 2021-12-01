@@ -31,25 +31,32 @@
         <section id="intro">
           <h1 id="welcomeToMe"><u>Welcome To Me!</u></h1>
           <p>This page is a view into me. I hope you enjoy your stay.</p>
-          <div>
+          <div style="width: fit-content;">
           <a
             href="https://github.com/ShaneButtCodeNL/"
             target="_blank"
-            style="color: var(--dark-color)">
+            style="color: var(--dark-color)"
+            onfocus="slideInLinkLeft('githubSlide')"
+            onblur="slideOutLinkLeft('githubSlide')">
             <div style="width:fit-content;height: fit-content;position: relative;"
             onmouseenter="slideInLinkLeft('githubSlide')"
-            onmouseleave="slideOutLinkLeft('githubSlide')">
-              <div id="githubSlide" class="slideLinkLeft"></div>
+            onmouseleave="slideOutLinkLeft('githubSlide')"
+            >
+              <div id="githubSlide" class="slideLink slideLinkLeft"></div>
               <p>GitHub</p>
               </div>
             </a>
           </div>
-          <div >
-            <a href="https://www.linkedin.com/in/shane-butt-134812146/" target="_blank" style="color:var(--dark-color)">
+          <div style="width: fit-content;">
+            <a href="https://www.linkedin.com/in/shane-butt-134812146/"
+            target="_blank"
+            style="color:var(--dark-color)"
+            onfocus="slideInLinkRight('linkedinSlide')"
+            onblur="slideOutLinkRight('linkedinSlide')">
             <div style="width:fit-content;height: fit-content;position: relative;"
             onmouseenter="slideInLinkRight('linkedinSlide')"
             onmouseleave="slideOutLinkRight('linkedinSlide')">
-              <div id="linkedinSlide" class="slideLinkRight"></div>
+              <div id="linkedinSlide" class="slideLink slideLinkRight"></div>
               <p>LinkedIn</p>
             </div>
            </a>
