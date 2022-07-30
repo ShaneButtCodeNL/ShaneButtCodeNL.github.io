@@ -134,16 +134,38 @@
               <h2>My Projects</h2>
               <section>
                 <h3>My Collection app and API:</h3>
+                <!-- React -->
+                <div id="collectionAppReact" class="showDiv">
+                <button type="button" id="showDotnetButton">Show Dot Net</button>
+                <br/>
                 <a
                     href="https://github.com/ShaneButtCodeNL/collection-api"
                     target="_blank"
                     >API</a
-                  ><br />
-                  <a
-                    href="https://github.com/ShaneButtCodeNL/my-collection-app"
+                >
+                <br />
+                <a
+                  href="https://github.com/ShaneButtCodeNL/my-collection-app"
+                  target="_blank"
+                  >APP</a
+                >
+                </div>
+                <!-- DOTNET -->
+                <div id="collectionAppDotnet" class="hideDiv">
+                <button type="button" id="showReactButton">Show React</button>
+                <br/>
+                <a
+                    href="https://github.com/ShaneButtCodeNL/CollectionItems"
                     target="_blank"
-                    >APP</a
-                  >
+                    >API</a
+                >
+                <br />
+                <a
+                  href="https://github.com/ShaneButtCodeNL/CollectionApp"
+                  target="_blank"
+                  >APP</a
+                >
+                </div>
                 <div class="projectsContentContainer">
                   
                   <div class="projectDescription">
@@ -158,7 +180,7 @@
                     <p></p>
                   </div>
                   <!-- Slideshow of images to show app-->
-                  <div id="slideShow1" class="slideshowContainer">
+                  <div id="slideShow1" class="slideshowContainer showSlideShow">
                     <input type="number" name="slide1Pos" id="slide1Pos" class="slideShowValue" value="1" >
                     <!--Slides-->
                     <div class="slides fade p1Slides">
@@ -247,8 +269,102 @@
                     <div>
                       <a href="#slideShow1"><div class="clickDiv" id="slideShow1Big"  onclick="bigScreen('slideShow1')">Enlarge</div></a>
                       <a href="#slideShow1"><div class="clickDiv" id="slideShow1Small"  onclick="smallScreen('slideShow1')" style="display: none;">Shrink</div></a>
+                    </div>
                   </div>
+                  <!--END-->
+                  <!-- Slideshow of images to show app-->
+                  <div id="slideShow1a" class="slideshowContainer hideSlideShow">
+                    <input type="number" name="slide1aPos" id="slide1aPos" class="slideShowValue" value="1" >
+                    <!--Slides-->
+                    <div class="slides fade p1aSlides">
+                        <div class="numText">1 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic1.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Title Screen</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">2 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic2.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Light Theme</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">3 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic3.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Just show one type of collection (Manga).</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">4 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic4.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Login Modal</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">5 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic5.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Search by name</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">6 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic6.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Login Screen filled in</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">7 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic7.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Home page Logged in</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">8 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic8.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Remove an item from collection Database</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">9 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic9.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Edit details of an item</span></div>
+                    </div>
+                    <div class="slides fade p1aSlides">
+                      <div class="numText">10 / 10</div>
+                      <img
+                        src="img/collection-app-dotnet/pic10.png"
+                        style="width: 100%"
+                      />
+                      <div class="imgDesc"><span>Add an item to the database</span></div>
+                    </div>
+                    <!--Controls-->
+                    <a class="prevImg" onclick="plusSlides(-1,'p1aSlides','slide1aPos')">&#10094</a>
+                    <a class="nextImg" onclick="plusSlides(1,'p1aSlides','slide1aPos')">&#10095</a>
+                    <div>
+                      <a href="#slideShow1a"><div class="clickDiv" id="slideShow1aBig"  onclick="bigScreen('slideShow1a')">Enlarge</div></a>
+                      <a href="#slideShow1a"><div class="clickDiv" id="slideShow1aSmall"  onclick="smallScreen('slideShow1a')" style="display: none;">Shrink</div></a>
+                    </div>
                   </div>
+                  <!--END-->
                 </div>
                 
               </section>

@@ -365,6 +365,13 @@ SlideShow
   top: 0;
 }
 
+.hideSlideShow {
+  display: none;
+}
+.hideDiv {
+  display: none;
+}
+
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;

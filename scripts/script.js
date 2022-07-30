@@ -16,11 +16,42 @@ let skillsFlag = false;
 let projectsFlag = false;
 
 /**
+ * used for show/hide project div
+ */
+function showReactCollection() {
+  document.getElementById("collectionAppReact").classList.remove("hideDiv");
+  document.getElementById("collectionAppReact").classList.add("showDiv");
+  document.getElementById("slideShow1").classList.add("showSlideShow");
+  document.getElementById("slideShow1").classList.remove("hideSlideShow");
+  document.getElementById("collectionAppDotnet").classList.remove("showDiv");
+  document.getElementById("collectionAppDotnet").classList.add("hideDiv");
+  document.getElementById("slideShow1a").classList.remove("showSlideShow");
+  document.getElementById("slideShow1a").classList.add("hideSlideShow");
+}
+function showDotnetCollection() {
+  document.getElementById("collectionAppReact").classList.remove("showDiv");
+  document.getElementById("collectionAppReact").classList.add("hideDiv");
+  document.getElementById("slideShow1").classList.add("hideSlideShow");
+  document.getElementById("slideShow1").classList.remove("showSlideShow");
+  document.getElementById("collectionAppDotnet").classList.remove("hideDiv");
+  document.getElementById("collectionAppDotnet").classList.add("showDiv");
+  document.getElementById("slideShow1a").classList.add("showSlideShow");
+  document.getElementById("slideShow1a").classList.remove("hideSlideShow");
+}
+document
+  .getElementById("showDotnetButton")
+  .addEventListener("click", showDotnetCollection);
+document
+  .getElementById("showReactButton")
+  .addEventListener("click", showReactCollection);
+/**
  * Used for image slides
  */
 
 var slideIndex = 1;
 showSlides(slideIndex, "p1Slides", "slide1Pos");
+showSlides(slideIndex, "p1aSlides", "slide1aPos");
+
 showSlides(slideIndex, "p2Slides", "slide2Pos");
 
 // Next/previous controls
