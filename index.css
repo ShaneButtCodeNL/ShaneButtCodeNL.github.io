@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
   top: 0;
-  background-image: url(./img/downtownHarbor.jpg);
+  background-image: url(./img/downtownHarborSmall.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--light-color);
