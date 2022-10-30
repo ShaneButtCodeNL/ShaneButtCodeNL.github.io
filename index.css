@@ -8,10 +8,13 @@
   --my-red: #ff0d37;
   --dark-color: #2e2921;
   --light-color: #c0b9a9;
+  --light-color-bg: #181715c2;
   --section-tri-height: 5em;
   --marker-offset: -5em;
   --section-content-width: 70%;
   --header-before-size: 0px;
+  --white-text-shadow-emphasis: 5px 5px 10px white, -5px -5px 10px white,
+    -5px 5px 10px white, 5px -5px 10px white, 0 0 5px white;
 }
 
 html {
@@ -25,8 +28,8 @@ body {
   top: 0;
   background-image: url(./img/downtownHarborSmall.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--light-color);
+  background-size: 100vw 100vh;
+  background-color: var(--light-color-bg);
   color: var(--dark-color);
   background-position: fixed;
   background-blend-mode: screen;
@@ -130,6 +133,7 @@ nav a {
   width: fit-content;
   height: fit-content;
   line-height: 2.1em;
+  text-shadow: var(--white-text-shadow-emphasis);
 }
 
 #welcomeToMe {
@@ -395,6 +399,14 @@ SlideShow
   to {
     opacity: 1;
   }
+}
+
+.contactBox {
+  text-shadow: var(--white-text-shadow-emphasis);
+}
+.contactBox input,
+.contactBox textarea {
+  text-shadow: none;
 }
 
 #contactMe {
