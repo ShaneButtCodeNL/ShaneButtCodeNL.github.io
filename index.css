@@ -148,6 +148,7 @@ nav a {
 #welcomeToMe {
   font-family: "Lobster", cursive;
   padding: 0 1em;
+  text-align: center;
 }
 .slideLinkContainer {
   width: fit-content;
