@@ -449,6 +449,7 @@ SlideShow
 .messageItem {
   width: 100%;
   max-width: 20ch;
+  padding-bottom: 1em;
 }
 
 #messageContainer input,
