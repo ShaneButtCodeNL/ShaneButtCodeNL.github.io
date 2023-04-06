@@ -1,5 +1,20 @@
 /*@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap");*/
 
+@keyframes title-shrink {
+  from {
+    max-height: 100%;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+  }
+  to {
+    max-width: 0%;
+    max-height: 0%;
+    left: 50%;
+    top: 50%;
+  }
+}
+
 :root {
   --text-color: rgb(0, 0, 0);
   --my-yellow: #ffc000;
@@ -42,6 +57,26 @@ body {
   color: var(--dark-color);
   background-position: center;
   background-blend-mode: screen;
+  position: relative;
+}
+.bg::before {
+  content: "";
+  background-image: url(./img/downtownHarborSmall.jpg);
+
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-color: var(--light-color-bg);
+  background-position: center;
+  background-blend-mode: screen;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  color: var(--light-color);
+  position: absolute;
+  z-index: 1000;
+  animation: title-shrink 500ms linear 500ms;
+  animation-fill-mode: forwards;
 }
 
 h2 {

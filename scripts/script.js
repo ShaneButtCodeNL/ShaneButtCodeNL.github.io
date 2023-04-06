@@ -192,6 +192,8 @@ const scrollFunction = () => {
   slideInAboutMe("aboutMeSlideSection");
   slideInSkills("skillsSlideSection");
   slideInProjects("projectsSlideSection");
+  let element = document.getElementById("bg-mask");
+  element.classList.add("bg-mask-hide");
 };
 
 //Sets the headerScroll function to trigger when the classWrapper div scrolls
